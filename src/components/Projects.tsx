@@ -46,7 +46,7 @@ export function Projects() {
 
       <div>
         <h2 className="mb-6 text-xl font-semibold text-foreground">{activeLabel}</h2>
-        <ProjectGrid projects={visibleProjects} />
+        <ProjectGrid key={activeCategory} projects={visibleProjects} />
       </div>
     </section>
   );
