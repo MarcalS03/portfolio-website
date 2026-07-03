@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-
 const SCATTER_POINTS: { x: number; y: number }[] = [
   { x: 60, y: 235 },
   { x: 90, y: 255 },
@@ -30,34 +26,6 @@ const CONTACT_LINKS = [
 ];
 
 export function Hero() {
-  const chartRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const chart = chartRef.current;
-    if (!chart) return;
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
-
-    let frame = 0;
-    const handleMove = (event: MouseEvent) => {
-      const rect = chart.getBoundingClientRect();
-      const relX = (event.clientX - rect.left) / rect.width - 0.5;
-      const relY = (event.clientY - rect.top) / rect.height - 0.5;
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        chart.style.transform = `translate(${relX * -8}px, ${relY * -8}px)`;
-      });
-    };
-
-    window.addEventListener("mousemove", handleMove);
-    return () => {
-      window.removeEventListener("mousemove", handleMove);
-      cancelAnimationFrame(frame);
-    };
-  }, []);
-
   return (
     <section className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-8 pt-20 sm:px-10 sm:pb-10 sm:pt-28 md:flex-row md:items-center md:gap-16">
       <div className="flex-1">
@@ -67,13 +35,23 @@ export function Hero() {
         <p className="mt-4 text-lg text-foreground-muted">
           Data Analyst &amp; ML Engineer
         </p>
-        <a
-          href="/resume.pdf"
-          download
-          className="mt-8 inline-flex items-center rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#3f50b3]"
-        >
-          Download CV
-        </a>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href="/resume.pdf"
+            download
+            className="inline-flex items-center rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#3f50b3]"
+          >
+            Download CV
+          </a>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#3f50b3]"
+          >
+            Preview CV
+          </a>
+        </div>
         <div className="mt-4 flex flex-wrap gap-3">
           {CONTACT_LINKS.map((link) => {
             const isExternal = link.href.startsWith("http");
@@ -93,9 +71,8 @@ export function Hero() {
       </div>
 
       <div
-        ref={chartRef}
         aria-hidden="true"
-        className="flex-1 transition-transform duration-300 ease-out will-change-transform"
+        className="flex-1"
       >
         <svg
           viewBox="0 0 480 320"
