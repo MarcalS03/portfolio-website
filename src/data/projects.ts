@@ -8,24 +8,24 @@ export interface Project {
   href: string;
 }
 
-// Replace the placeholder title, description, and href below with your
-// actual project details. Add more entries as you finish new projects -
-// the grid and pagination adapt automatically.
+// Add more entries as you finish new projects - the grid and pagination
+// adapt automatically. Give a project a custom thumbnail by adding a case
+// for its slug in PROJECT_THUMBNAILS (src/components/ProjectCard.tsx).
 export const projects: Project[] = [
   {
-    slug: "data-analysis-project-1",
-    title: "Add your data analysis project title",
+    slug: "ireland-housing-supply-analysis",
+    title: "Irish Housing Supply Analysis",
     description:
-      "Replace with a short summary of the dataset, the analysis, and the tools used.",
+      "An analysis of housing supply trends across Ireland, exploring regional construction rates and delivery against demand.",
     category: "data-analysis",
-    href: "#",
+    href: "https://github.com/MarcalS03/ireland-housing-supply-analysis",
   },
   {
-    slug: "ml-project-1",
-    title: "Add your machine learning project title",
+    slug: "fuga-ml",
+    title: "FugaML",
     description:
-      "Replace with a short summary of the model, the problem it solves, and the results.",
+      "A customer churn prediction API built with FastAPI and Docker, serving a trained ML model behind a lightweight REST interface.",
     category: "machine-learning",
-    href: "#",
+    href: "https://github.com/MarcalS03/fuga-ml",
   },
 ];
