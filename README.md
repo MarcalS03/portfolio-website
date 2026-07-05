@@ -35,6 +35,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   grid and pagination adapt automatically.
 - `public/resume.pdf` - the CV served by the Hero's "Download CV" and
   "Preview CV" buttons. Replace this file to update the resume.
+- `src/app/icon.svg`, `src/app/favicon.ico`, `src/app/apple-icon.png` - MS
+  monogram favicon and app icons, picked up automatically by Next.js.
 
 ## Deployment
 
