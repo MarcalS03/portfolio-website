@@ -27,7 +27,7 @@ const CONTACT_LINKS = [
 
 export function Hero() {
   return (
-    <section className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-8 pt-20 sm:px-10 sm:pb-10 sm:pt-28 md:flex-row md:items-center md:gap-16">
+    <section className="mx-auto flex max-w-6xl flex-col gap-12 px-6 pb-8 pt-20 sm:gap-10 sm:px-10 sm:pb-10 sm:pt-28 md:flex-row md:items-center md:gap-16">
       <div className="flex-1">
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           Marcal Soteras
@@ -35,7 +35,7 @@ export function Hero() {
         <p className="mt-4 text-lg text-foreground-muted">
           Data Analyst &amp; ML Engineer
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-10 flex flex-wrap gap-3 sm:mt-8">
           <a
             href="/resume.pdf"
             download
@@ -52,7 +52,7 @@ export function Hero() {
             Preview CV
           </a>
         </div>
-        <div className="mt-4 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap gap-3 sm:mt-4">
           {CONTACT_LINKS.map((link) => {
             const isExternal = link.href.startsWith("http");
             return (
@@ -76,7 +76,7 @@ export function Hero() {
       >
         <svg
           viewBox="0 0 480 320"
-          className="mx-auto h-auto w-full max-w-md md:mx-0"
+          className="mx-auto h-auto w-4/5 max-w-[260px] sm:w-full sm:max-w-md md:mx-0"
         >
           <g stroke="var(--border)" strokeWidth="1.5">
             <line x1="30" y1="20" x2="30" y2="280" />
