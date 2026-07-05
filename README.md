@@ -27,7 +27,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `src/components/ProjectGrid.tsx` - responsive project grid with pagination
   (6 projects per page).
 - `src/components/ProjectCard.tsx` - individual project card with thumbnail,
-  description, and a link to the project. Thumbnails default to a generic
+  description, and a link to the project. The description is hidden on
+  mobile viewports to keep cards compact. Thumbnails default to a generic
   icon per category, or can be overridden per project by adding a slug entry
   to `PROJECT_THUMBNAILS`.
 - `src/data/projects.ts` - project content. Add a new entry here (with a
