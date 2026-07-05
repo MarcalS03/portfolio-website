@@ -46,7 +46,7 @@ function HouseIcon() {
 
 function FugaMLWordmark() {
   return (
-    <span className="text-xl font-bold tracking-tight text-accent sm:text-3xl lg:text-4xl">
+    <span className="text-xl font-bold tracking-tight text-accent sm:text-4xl">
       FugaML
     </span>
   );
@@ -90,7 +90,7 @@ export function ProjectCard({ project }: { project: Project }) {
           href={project.href}
           target={isExternal ? "_blank" : undefined}
           rel={isExternal ? "noopener noreferrer" : undefined}
-          className="mt-2 inline-flex w-fit items-center rounded-md border border-accent px-3 py-1.5 text-xs font-medium text-accent transition-colors hover:bg-accent hover:text-white sm:px-4 sm:py-2 sm:text-sm"
+          className="mt-auto inline-flex w-fit items-center rounded-md border border-accent px-3 py-1.5 text-xs font-medium text-accent transition-colors hover:bg-accent hover:text-white sm:px-4 sm:py-2 sm:text-sm"
         >
           View Project
         </a>
