@@ -1,7 +1,6 @@
 # Portfolio Website
 
-Personal portfolio site for Marcal Soteras, a data analyst and machine learning
-engineer job hunter.
+Personal portfolio site for Marcal Soteras, a data analyst job hunter.
 Built with [Next.js](https://nextjs.org) (App Router), TypeScript, and Tailwind
 CSS, and deployed on Vercel.
 
