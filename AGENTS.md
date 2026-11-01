@@ -17,3 +17,10 @@
   `0 0 480 320`. Cropping the viewBox to hug the axis lines was tried and
   explicitly reverted after review; only the mobile width/centering
   (`w-4/5 max-w-[260px] mx-auto`) should change on small screens.
+- Projects section: the Machine Learning tab is intentionally hidden for now,
+  so the section renders only `data-analysis` projects. Keep the `fuga-ml`
+  entry in `src/data/projects.ts` and its thumbnail in `ProjectCard.tsx` even
+  though nothing displays them; they are not dead code to clean up. FugaML
+  stays on the CV until replacement projects are ready.
+- Site title and positioning: use "Data Analyst" to match `public/resume.pdf`,
+  rather than the earlier "Data Analyst & ML Engineer" wording.
