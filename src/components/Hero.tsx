@@ -33,7 +33,7 @@ export function Hero() {
           Marcal Soteras
         </h1>
         <p className="mt-4 text-lg text-foreground-muted">
-          Data Analyst &amp; ML Engineer
+          Data Analyst
         </p>
         <div className="mt-10 flex flex-wrap gap-3 sm:mt-8">
           <a
