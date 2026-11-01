@@ -1,9 +1,10 @@
 import { projects } from "@/data/projects";
 import { ProjectGrid } from "./ProjectGrid";
 
-// Machine Learning Projects tab is hidden for now (FugaML is being pulled
-// from the CV). Re-add the category switcher from git history once there
-// are ML projects to show again.
+// Machine Learning Projects tab is hidden while the Data Analysis project
+// lineup grows; FugaML will come off the CV once replacement projects are
+// ready. Re-add the category switcher from git history if there is a new ML
+// project to show.
 const visibleProjects = projects.filter(
   (project) => project.category === "data-analysis",
 );

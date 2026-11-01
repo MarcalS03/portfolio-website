@@ -9,12 +9,14 @@ export interface Project {
 }
 
 // Add more entries as you finish new projects - the grid and pagination
-// adapt automatically. Give a project a custom thumbnail by adding a case
-// for its slug in PROJECT_THUMBNAILS (src/components/ProjectCard.tsx).
+// adapt automatically. Only data-analysis entries are currently displayed
+// (see src/components/Projects.tsx). Give a project a custom thumbnail by
+// adding a case for its slug in PROJECT_THUMBNAILS
+// (src/components/ProjectCard.tsx).
 export const projects: Project[] = [
   {
     slug: "ireland-housing-supply-analysis",
-    title: "Irish Housing Supply Analysis",
+    title: "Where Is Ireland Building?",
     description:
       "An analysis of housing supply trends across Ireland, exploring regional construction rates and delivery against demand.",
     category: "data-analysis",

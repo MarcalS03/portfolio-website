@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Marcal Soteras Portfolio",
   description:
-    "Portfolio of Marcal Soteras, a data analyst and machine learning engineer based in Dundalk, Ireland.",
+    "Portfolio of Marcal Soteras, a data analyst based in Dundalk, Ireland.",
 };
 
 export default function RootLayout({
